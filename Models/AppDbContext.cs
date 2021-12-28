@@ -38,10 +38,10 @@ namespace SneakersFootprint.Models
                     "stripped-down brand details give a look from the early 90's." +
                     "Color shown: Shadow/Black/Midnight Navy. Style: DH8143 - 400",
                 CategoryId = 1,
-                ImageUrl = "src=~/Images/sko-air-huarache-le-7ggQkX",
+                ImageUrl = "src=~/Images/sko-air-huarache-le-7ggQkX.jpg",
                 InStock = true,
                 Sale = true,
-                ImageThumbnailUrl = "src=~/Images/sko-air-huarache-le-7ggQkX",
+                ImageThumbnailUrl = "src=~/Images/sko-air-huarache-le-7ggQkX.jpg",
             });
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
@@ -53,10 +53,10 @@ namespace SneakersFootprint.Models
                     "Get ready to reach your next personal best in this road shoe that's made for fast movement. It gives you the best energy reproduction of all our race shoes with a forward feel all the way across the finish line. The design is lightweight, breathable and designed using scientific data to give you a comfortable fit. The details celebrate our shared ability to take on tough challenges." +
                     "Color shown: White/Black/Pink. Style: DJ5456-100",
                 CategoryId = 2,
-                ImageUrl = "~/Images/tavlingsskor-vag-air-zoom-alphafly-next-flyknit-HqKDw4",
+                ImageUrl = "~/Images/tavlingsskor-vag-air-zoom-alphafly-next-flyknit-HqKDw4.jpg",
                 InStock = true,
                 Sale = false,
-                ImageThumbnailUrl = "~/Images/tavlingsskor-vag-air-zoom-alphafly-next-flyknit-HqKDw4",
+                ImageThumbnailUrl = "~/Images/tavlingsskor-vag-air-zoom-alphafly-next-flyknit-HqKDw4.jpg",
             });
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
@@ -68,10 +68,10 @@ namespace SneakersFootprint.Models
                     "Forget the lacing – you can just pull these on. Run around the block or compete with your friends – Nike Flex Runner makes everything easy. The foam sole is super flexible so that each step and jump is as easy as 1, 2, 3." +
                     "Color shown: Medium Ash/Siren Red/Black. Style: AT4662-200",
                 CategoryId = 3,
-                ImageUrl = "~/Images/loparskor-flex-runner-sTBg4T",
+                ImageUrl = "~/Images/loparskor-flex-runner-sTBg4T.jpg",
                 InStock = true,
                 Sale = false,
-                ImageThumbnailUrl = "~/Images/loparskor-flex-runner-sTBg4T",
+                ImageThumbnailUrl = "~/Images/loparskor-flex-runner-sTBg4T.jpg",
             });
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
@@ -83,10 +83,10 @@ namespace SneakersFootprint.Models
                     "Precision-made, seamless zones combine strength and function with smooth comfort to ensure interference-free movements." +
                     "Color shown: Core Black. Product code: FY9121",
                 CategoryId = 1,
-                ImageUrl = "../Images/loparskor-flex-runner-sTBg4T",
+                ImageUrl = "~/Images/Ultraboost_4.0_DNA_Shoes_black.jpg",
                 InStock = true,
                 Sale = false,
-                ImageThumbnailUrl = "../Images/loparskor-flex-runner-sTBg4T",
+                ImageThumbnailUrl = "~/Images/Ultraboost_4.0_DNA_Shoes_black.jpg",
             });
 
 

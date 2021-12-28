@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SneakersFootprint.Models;
 
 namespace SneakersFootprint.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211228082625_change src add")]
+    partial class changesrcadd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -137,8 +139,8 @@ namespace SneakersFootprint.Migrations
                         {
                             SneakerId = 4,
                             CategoryId = 1,
-                            ImageThumbnailUrl = "~/Images/Ultraboost_4.0_DNA_Shoes_black.jpg",
-                            ImageUrl = "~/Images/Ultraboost_4.0_DNA_Shoes_black.jpg",
+                            ImageThumbnailUrl = "~/Images/loparskor-flex-runner-sTBg4T.jpg",
+                            ImageUrl = "~/Images/loparskor-flex-runner-sTBg4T.jpg",
                             InStock = true,
                             LongDescription = "Precision-made, seamless zones combine strength and function with smooth comfort to ensure interference-free movements.Color shown: Core Black. Product code: FY9121",
                             Name = "Adidas",
