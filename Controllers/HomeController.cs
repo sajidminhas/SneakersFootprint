@@ -13,10 +13,19 @@ namespace SneakersFootprint.Controllers
         
         public IActionResult Index()
         {
-          
-            return View();
-            
+            return View();   
         }
-       
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
     }
 }

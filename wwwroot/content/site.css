@@ -6,7 +6,7 @@
 
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-   
+    height:100%;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -17,7 +17,7 @@ body {
 }
 
 .carousel-holder {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .carousel-control,
@@ -53,18 +53,23 @@ body {
 }
 
 footer {
-    margin: 50px 0;
-    background-color: #434444;
-    border-color: #434444;
+    background-color: black;
+    border-color: black;
+    margin-top: 20px;
+    bottom: 0;
+    font-size: 1.2em;
+    position:relative;
+    
+    
+    
 }
-
 .navbar {
     background-image: none;
 }
 
 .navbar-inverse {
-    background-color: #434444;
-    border-color: #434444;
+    background-color: #999999;
+    border-color: #999999;
 }
 
 .nav.navbar-nav.navbar-right li a {
@@ -80,7 +85,7 @@ footer {
 }
 
 .carousel .item {
-    height: 400px;
+    height: 430px;
 }
 
 .item img {
@@ -91,13 +96,11 @@ footer {
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
-
-    background-color: #fcaeae !important;
-    border-color: #fba1a1 !important;
+    background-color: #000000 !important;
+    border-color: #bcbcbc !important;
 }
 
-.btn
-{
-    background-color: #fcaeae !important;
-    border-color: #fba1a1 !important;
+.btn {
+    background-color: #000000 !important;
+    border-color: #bcbcbc !important;
 }

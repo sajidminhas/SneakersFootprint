@@ -31,14 +31,10 @@ namespace SneakersFootprint.Models
             }
         }
 
-        public Sneaker GetPieById(int sneakerId)
+        public Sneaker GetSneakerById(int sneakerId)
         {
             return _appDbContext.Sneakers.FirstOrDefault(s => s.SneakerId == sneakerId);
         }
 
-        public Sneaker GetSneakerById(int sneakerId)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

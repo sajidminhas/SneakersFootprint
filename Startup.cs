@@ -15,14 +15,12 @@ namespace SneakersFootprint
 {
     public class Startup
     {
-        
+              
+        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -31,6 +29,10 @@ namespace SneakersFootprint
            
             services.AddScoped<ISneakerRepository, SnearkerRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+            services.AddHttpContextAccessor();
+            services.AddSession();
             services.AddControllersWithViews();
             
         }
@@ -51,7 +53,7 @@ namespace SneakersFootprint
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseRouting();
 
             app.UseAuthorization();
