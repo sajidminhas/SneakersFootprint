@@ -7,6 +7,7 @@
         <tr>
             <th>Selected amount</th>
             <th>Sneaker</th>
+            <th>Size</th>
             <th class="text-right">Price</th>
             <th class="text-right">Subtotal</th>
         </tr>
@@ -17,6 +18,7 @@
             <tr>
                 <td class="text-center">@line.Amount</td>
                 <td class="text-left">@line.Sneaker.Name</td>
+                <td class="text-left">@line.Sneaker.ShortDescription</td>
                 <td class="text-right">@line.Sneaker.Price.ToString("c")</td>
                 <td class="text-right">
                     @((line.Amount * line.Sneaker.Price).ToString("c"))
@@ -26,7 +28,7 @@
     </tbody>
     <tfoot>
         <tr>
-            <td colspan="3" class="text-right">Total:</td>
+            <td colspan="4" class="text-right">Total:</td>
             <td class="text-right">
                 @Model.ShoppingCartTotal.ToString("c")
             </td>

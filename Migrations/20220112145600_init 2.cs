@@ -2,16 +2,16 @@
 
 namespace SneakersFootprint.Migrations
 {
-    public partial class seededmoredata2 : Migration
+    public partial class init2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.UpdateData(
                 table: "Sneakers",
                 keyColumn: "SneakerId",
-                keyValue: 11,
-                column: "ImageThumbnailUrl",
-                value: "/Images/sko-air-max-pre-day-W67m0w.jpg");
+                keyValue: 14,
+                column: "Name",
+                value: "Nike Air Zoom Pegasus 38");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -19,9 +19,9 @@ namespace SneakersFootprint.Migrations
             migrationBuilder.UpdateData(
                 table: "Sneakers",
                 keyColumn: "SneakerId",
-                keyValue: 11,
-                column: "ImageThumbnailUrl",
-                value: "Images/sko-air-max-pre-day-W67m0w.jpg");
+                keyValue: 14,
+                column: "Name",
+                value: "Nike Air Zoom Pegasus 38 Premium");
         }
     }
 }

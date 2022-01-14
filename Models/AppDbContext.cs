@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SneakersFootprint.Models
 {
-    public class AppDbContext: DbContext
+    public class AppDbContext: IdentityDbContext<IdentityUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -32,9 +34,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 1,
-                Name = "Nike",
+                Name = "Nike Air Huarache LE",
                 Price = 1199.95M,
-                ShortDescription = "Air Huarache LE!",
+                ShortDescription = "Size. EU 42",
                 LongDescription =
                     "The Nike Air Huarache LE is a favorite with a street feel. A comfortable shoe with an excellent fit. The upper combines elegant" +
                     " leather details with a super airy, glossy neoprene-like material that provides many styling options. Classic heel clip and " +
@@ -49,9 +51,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 2,
-                Name = "Nike",
+                Name = "Nike Air Zoom Alphafly",
                 Price = 779.95M,
-                ShortDescription = "Air Zoom Alphafly!",
+                ShortDescription = "Size. EU 39",
                 LongDescription =
                     "Get ready to reach your next personal best in this road shoe that's made for fast movement. It gives you the best energy reproduction of all our race shoes with a forward feel all the way across the finish line. The design is lightweight, breathable and designed using scientific data to give you a comfortable fit. The details celebrate our shared ability to take on tough challenges." +
                     "Color shown: White/Black/Pink. Style: DJ5456-100",
@@ -64,9 +66,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 3,
-                Name = "Nike",
+                Name = "Nike Flex Runner",
                 Price = 499.95M,
-                ShortDescription = "Flex Runner!",
+                ShortDescription = "Size. EU 35.5",
                 LongDescription =
                     "Forget the lacing – you can just pull these on. Run around the block or compete with your friends – Nike Flex Runner makes everything easy. The foam sole is super flexible so that each step and jump is as easy as 1, 2, 3." +
                     "Color shown: Medium Ash/Siren Red/Black. Style: AT4662-200",
@@ -79,9 +81,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 4,
-                Name = "Adidas",
+                Name = "Adidas ULTRABOOST 4.0 DNA",
                 Price = 1299.95M,
-                ShortDescription = "ULTRABOOST 4.0 DNA!",
+                ShortDescription = "Size. EU 42",
                 LongDescription =
                     "Precision-made, seamless zones combine strength and function with smooth comfort to ensure interference-free movements." +
                     "Color shown: Core Black. Product code: FY9121",
@@ -94,9 +96,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 5,
-                Name = "Nike",
+                Name = "Nike Air Max 90 LTR",
                 Price = 1249M,
-                ShortDescription = "Nike Air Max 90 LTR!",
+                ShortDescription = "Size. EU 29.5",
                 LongDescription =
                    "In the past, it was revolutionary. Today? Today it is iconic. The Nike Air Max 90 LTR SE is back with a design that's more suited for kids than the original. The update has a softer cushioning, more flexibility and a more comfortable feel. This special edition is inspired by medals that celebrate us all as winners." +
                    "Color shown: Off Noir/Black/Summit White/Metallic Pewte. Product code: CD6864-117",
@@ -109,9 +111,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 6,
-                Name = "Nike",
+                Name = "Nike Huarache Run",
                 Price = 949M,
-                ShortDescription = "Huarache Run!",
+                ShortDescription = "Size. EU 31",
                 LongDescription =
                    "The Nike Huarache Run has an unmistakable style. The shoe is equipped with the famous Huarache heel strap that allows you to easily stick your foot in it. An inner shoe that sits comfortably around the foot and provides safety and support when running, climbing and playing." +
                    "Color shown: White/Off Noir/Mint Foam. Product code: 704949-116",
@@ -124,9 +126,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 7,
-                Name = "Nike",
+                Name = "Nike Flex Advance",
                 Price = 649M,
-                ShortDescription = "Flex Advance!",
+                ShortDescription = "Size. EU 36",
                 LongDescription =
                   "The Nike Flex Advance is as simple as counting to three. Nike FlyEase technology provides an extra wide opening so small feet can slide in effortlessly (seriously, it's as easy as it gets). Cross the ribbons (to prepare the kids for real shoelaces) and then it's done. They are super flexible, comfortable and durable – perfect for the little ones to walk, run and play in." +
                   "Color shown: Black/Siren Red/Medium Ash/White. Product code: CZ0186-005",
@@ -139,9 +141,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 8,
-                Name = "Nike",
+                Name = "Nike Blazer Mid 77",
                 Price = 749M,
-                ShortDescription = "Blazer Mid '77!",
+                ShortDescription = "Size. EU 31",
                 LongDescription =
                  "Your little basketball player can own the court in the Nike Blazer Mid '77. The vintage look and comfortable feel make this classic a legendary street shoe even off the pitch.." +
                  "Color shown: Vit/Pecan/Vivid Sulfur. Product code: DA4087-103",
@@ -154,9 +156,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 9,
-                Name = "Nike",
+                Name = "Nike Air Max 270",
                 Price = 749M,
-                ShortDescription = "Air Max 270!",
+                ShortDescription = "Size. EU 39",
                 LongDescription =
                  "The Nike Air Max 270 shoe combines the long Nike Air Max 180 tongue with classic elements from the Air Max 93. The model has the largest Air unit ever from Nike on its heel and is as comfortable as it looks." +
                  "Color shown: Black/Black. Product code: BQ5776-001",
@@ -170,9 +172,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 10,
-                Name = "Nike",
+                Name = "Nike Air Max Plus",
                 Price = 1899M,
-                ShortDescription = "Air Max Plus!",
+                ShortDescription = "Size. EU 40.5",
                 LongDescription =
                  "These sneakers are loaded with extra stability and cushioning. The top layers have stood the test of time since the original made an impression in '98.The design of the mesh material is inspired by crushed ice, creating a cool nod to outdoor activities in winter." +
                  "Color shown: Black/White/Dark Smoke Grey/Black. Product code: DO6384-001",
@@ -185,9 +187,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 11,
-                Name = "Nike",
+                Name = "Nike Air Max Pre-Day",
                 Price = 1449M,
-                ShortDescription = "Air Max Pre-Day!",
+                ShortDescription = "Size. EU 43",
                 LongDescription =
                  "Inspired by Nike's classic running shoes, the Nike Air Max Pre-Day features a design that creates a modern sense of speed. The shoe is a true tribute to history and is made of at least 20% recycled material in relation to its weight and has a running-inspired retro design. A new Air window attracts the eye along with an incredibly soft cushioning." +
                  "Color shown: Kumquat/Photon Dust/White/Pomegranate. Product code: DC9402-800",
@@ -200,9 +202,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 12,
-                Name = "Adidas",
+                Name = "Adidas NMD_R1",
                 Price = 1499M,
-                ShortDescription = "NMD_R1!",
+                ShortDescription = "Size. EU 40",
                 LongDescription =
                  "Pack your bag, lace up your shoes and get out. City adventures call when you have these NMD_R1 shoes on your feet. These modern sneakers are an update to an acclaimed 80s running shoe from the adidas archive, with a soft and stretchy knitted upper as well as energy-restoring Boost cushioning for all-day comfort. The strong colors and distinctive plugs in the midsole serve as a statement and max out the style level wherever you go. This product is made of Primeblue, a recycled functional material partly created with Parley Ocean Plastic. 50% of the upper is made of textile, 75% of the textile is Primeblue yarn. No newly produced polyester." +
                  "Color shown: Kumquat/Photon Dust/White/Pomegranate. Product code: GZ7925",
@@ -215,9 +217,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 13,
-                Name = "Adidas",
+                Name = "Adidas ULTRABOOST 1.0 DNA",
                 Price = 1949M,
-                ShortDescription = "ULTRABOOST 1.0 DNA!",
+                ShortDescription = "Size. EU 39",
                 LongDescription =
                  "You are responsible for the energy. These running shoes from adidas give it back. That's the magic behind the legendary Ultraboost design. This pair brings the OG adidas Primeknit pattern from 2015 to life as a tribute to the beloved shoe. Lace up and experience comfort all day long. Plus style, of course." +
                  "Color shown: Blue / Navy Blue / Wonder White. Product code: GV7723",
@@ -231,9 +233,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 14,
-                Name = "Nike",
+                Name = "Nike Air Zoom Pegasus 38",
                 Price = 1399M,
-                ShortDescription = "Air Zoom Pegasus 38 Premium!",
+                ShortDescription = "Size. EU 41.5",
                 LongDescription =
                  "Your workhorse with wings is back in colors and shapes inspired by your winter favorites. The Nike Air Zoom Pegasus 38 Premium continues to give you extra weight in the step, with the same responsive foam material as its predecessor. Airy mesh combines the comfortable feel and durability you want with a wider fit at the toes. Get out with a running classic with a winter-inspired twist." +
                  "Color shown: Blue Tint/Regal Pink/Light Smoke Grey/Multicolored. Product code: DC8796-400",
@@ -246,9 +248,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 15,
-                Name = "Nike",
+                Name = "Nike Air Max 270",
                 Price = 1699M,
-                ShortDescription = "Air Max 270!",
+                ShortDescription = "Size. EU 42",
                 LongDescription =
                     "Nike's first lifestyle Air Max gives you style, a comfortable feel and the right attitude in the Nike Air Max 270. Inspired by Air Max icons, the design showcases Nike's greatest innovation with its large window and new colors." +
                     "Color shown: White/White/Black. Style: AH6789-100",
@@ -261,9 +263,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 16,
-                Name = "Nike",
+                Name = "Nike Dunk Low SE",
                 Price = 1249M,
-                ShortDescription = "Dunk Low SE!",
+                ShortDescription = "Size. EU 39",
                 LongDescription =
                     "It was created for the basketball court but became an icon of street fashion. Now the basketball icon is back with metallic animal patterns and details that show off your wild side. The classic Nike Dunk Low SE basketball look gives you vintage-inspired style and the padded, low heel cap makes this model extra comfortable." +
                     "Color shown: Fossil Stone/Fossil Stone/Multicolored. Style: DD7099-200",
@@ -276,9 +278,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 17,
-                Name = "Nike",
+                Name = "Nike Air Max 270 G",
                 Price = 1699M,
-                ShortDescription = "Air Max 270 G!",
+                ShortDescription = "Size. EU 40",
                 LongDescription =
                     "Get a legendary look with the Nike Air Max 270 G. The silhouette is an accurate reconstruction of the classic Air model but has been updated with airy mesh material and an innovative grip for top-level gaming." +
                     "Color shown: Black/Hot Punch/White. Style: CK6483-001",
@@ -291,9 +293,9 @@ namespace SneakersFootprint.Models
             modelBuilder.Entity<Sneaker>().HasData(new Sneaker
             {
                 SneakerId = 18,
-                Name = "Nike",
+                Name = "Nike LeBron 19",
                 Price = 1699M,
-                ShortDescription = "LeBron 19!",
+                ShortDescription = "Size. EU 41",
                 LongDescription =
                     "LeBron likes when the stakes are high and the pressure is hard. LeBron 19 harnesses that energy with a molded fit and an updated cushioning system. The tight inner shoe is held together by a molded top layer. The shoelaces go through the top layer and prevent the foot from moving inside the shoe. Embedded cushions in the tongue and heel cap provide lower weight and support for the ankle. It gives the player a confident feeling and the confidence to give everything to decide the match." +
                     "Color shown: Mantra Orange/University Gold/University Red/Light Blue Fury. Style: DC9338-800",

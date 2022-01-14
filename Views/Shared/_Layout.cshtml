@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="container">
-        
+
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -26,37 +26,43 @@
                         <span class="icon-bar"></span>
                     </button>
                 </div>
-                <img class="img-responsive" alt="" src="~/Images/logo.png" width="120" height="70" style="float:left" />
+                <a asp-controller="Home" asp-action="Index">
+                    <img class="img-responsive" alt="" src="~/Images/logo.png" width="120" height="70" style="float:left" />
+                </a>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                      
+
                     <ul class="nav navbar-nav">
 
                         <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                        @await Component.InvokeAsync("CategoryMenu")
+                        <li> @await Component.InvokeAsync("CategoryMenu")</li>
                         <li><a asp-controller="Home" asp-action="ContactUs">Contact us</a></li>
                         @await Component.InvokeAsync("ShoppingCartSummary")
                     </ul>
+                    <div class="login">
+                        <partial name="_LoginPartial" />
+                    </div>                   
                 </div>
             </div>
         </nav>
         <div class="row">
-          
+
             <div class="col-md-12">
                 @RenderBody()
             </div>
         </div>
     </div>
+    @RenderSection("Scripts", required: false)
 
     <footer class="border-top footer text-muted">
         <div class="container">
 
-            &copy; 2021 - Sneakers Footprint  |
+            &copy; 2022 - Sneakers Footprint  |
             <a asp-controller="Home" asp-action="Privacy">Privacy</a> |
             <a asp-controller="Home" asp-action="AboutUs">About us</a> |
             <a asp-controller="Home" asp-action="ContactUs">Contact us</a>
             <img class="img-responsive" alt="" src="~/Images/mediaicon.jpg" width="80" height="30" style="float:right" />
         </div>
     </footer>
-    
+
 </body>
 </html>

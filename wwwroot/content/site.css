@@ -104,3 +104,8 @@ footer {
     background-color: #000000 !important;
     border-color: #bcbcbc !important;
 }
+.login {
+    position: relative;
+    float: right;
+    height:30px;
+}

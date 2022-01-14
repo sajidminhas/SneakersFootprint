@@ -28,19 +28,30 @@
 </div>
 <div class="row">
     <div class="col-md-4">
-        <h3>Men's collection</h3>
-        <p>A perfect combination of comfort, style and function..</p>
-        <img src="~/Images/MenCategory.jpg" class="img-rounded" alt="Cinque Terre" width="360" height="250">
-      
+        <a href='@Url.Action("List","Sneaker", new { category = "Men's Sneakers" })'>
+            <h3>Men's collection</h3>
+        </a>
+        <p>A perfect combination of comfort, style and function.</p>
+        <a href='@Url.Action("List","Sneaker", new { category = "Men's Sneakers" })'>
+            <img src="~/Images/MenCategory.jpg" class="img-rounded" alt="Men's Sneakers" width="360" height="250">
+        </a>
     </div>
     <div class="col-md-4">
-        <h3>Women's collection</h3>
-        <p>Women's love them, sneakers have style and comfort.</p>
-        <img src="~/Images/WomenCategory.jpg" class="img-rounded" alt="Cinque Terre" width="360" height="250">
+         <a href='@Url.Action("List","Sneaker", new { category = "Women's Sneakers" })'>
+            <h3>Women's collection</h3>
+         </a>
+            <p>Women's love them, sneakers have style and comfort.</p>
+         <a href='@Url.Action("List","Sneaker", new { category = "Women's Sneakers" })'>
+                    <img src="~/Images/WomenCategory.jpg" class="img-rounded" alt="Women's collection" width="360" height="250">
+         </a>
     </div>
     <div class="col-md-4">
-        <h3>Kid's collection</h3>
-        <p>Kids are happy with comfort and be stylish.</p>
-        <img src="~/Images/KidsCategory.jpg" class="img-rounded" alt="Cinque Terre" width="360" height="250">
+        <a href='@Url.Action("List","Sneaker", new { category = "Kid's Sneakers" })'>
+            <h3>Kid's collection</h3>
+        </a>
+            <p>Kids are happy with comfort and be stylish.</p>
+        <a href='@Url.Action("List","Sneaker", new { category = "Kid's Sneakers" })'>
+                <img src="~/Images/KidsCategory.jpg" class="img-rounded" alt="Kid's Sneakers" width="360" height="250">
+        </a>
     </div>
 </div>
